@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title Teachup
+    = csrf_meta_tags
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+
+  %body
+    = render 'partials/topbar'
+    .row.show-grid 
+      .span9.offset3
+        .container= yield

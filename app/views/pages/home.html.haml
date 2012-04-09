@@ -1,0 +1,30 @@
+%h1 Sk-Idea
+%h3 Just record your next idea
+%p
+%row
+  .span4  
+    %label
+      Drawing tool:
+      %select#dtool
+        %option{:value => "line"} Line
+        %option{:value => "rect"} Rectanlge
+        %option{:value => "pencil"} Pencil
+  %label
+    Include at this point:
+    %select#dtool
+      %option{:value => "line"} Table
+      %option{:value => "rect"} Image
+      %option{:value => "pencil"} Graph
+%canvas#canvas1{:width =>"800", :height => "400"}
+%button.btn.btn-success{:href => ""}  Idea Ready!
+= link_to "!", pages_ver_path
+.btn-group
+  %a.btn{:href => "#"}
+    %i.icon-facetime-video
+  %a.btn{:href => "#"}
+    %i.icon-pause
+  %a.btn{:href => "#"}
+    %i.icon-stop
+
+%span
+ 
