@@ -1,14 +1,28 @@
 Teachup::Application.routes.draw do
   
+  resources :proyectos
+
   root :to => "pages#home"
-  
   get "pages/home"
+  get "pages/home1"
+  get "pages/home2"
+  get "pages/home3"
+  get "pages/home4"
+  get "pages/home5"
+  get "pages/home6"
+  get "pages/home5a"
+  get "pages/excel"
+  get "pages/maps"
+  get "pages/presentation"
+  get "pages/proyecto1"
+  get "pages/vistaalumno"
+
 
   get "pages/ver"
-
   get "pages/help"
-
   get "pages/contactus"
+  get "pages/video"
+    
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

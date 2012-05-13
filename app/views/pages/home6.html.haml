@@ -1,0 +1,142 @@
+#container
+  #header
+    %h1 StarTrackr!
+  #content
+    %h2
+      Welcome!
+    %ul#menu
+      %li
+        %a{:href => "#"} What's new?
+        %ul.active
+          %li
+            %a{:href => "#"} Weekly specials
+          %li
+            %a{:href => "#"} Last night's pics!
+          %li
+            %a{:href => "#"} Users' comments
+      %li
+        %a{:href => "#"} Member extras
+        %ul
+          %li
+            %a{:href => "#"} Premium Celebrities
+          %li
+            %a{:href => "#"} 24-hour Surveillance
+      %li
+        %a{:href => "#"} About Us
+        %ul
+          %li
+            %a{:href => "#"} Privacy Statement
+          %li
+            %a{:href => "#"} Terms and Conditions
+          %li
+            %a{:href => "#"} Contact Us
+    %p#intro
+      Welcome to
+      %strong StarTrackr!
+      the planet's premier celebrity tracking and monitoring service. Need to know where in the world the best bands, musicians or producers are within 2.2 square meters? You've come to the right place. We have a very special special on B-grade celebs this week, so hurry in!
+    %p#disclaimer
+      Disclaimer! This service is not intended for the those with criminal intent. Celebrities are kind of like people so their privacy should be respected.
+    #news
+      %h2 Latest News
+      %p
+        Which member of the seminal calypso/lectro band
+        %em C&C Music Sweatshop
+        was spotted last night at
+        = succeed "," do
+          %em Dirt
+        the trendy New York restaurant that serves only food caught and retrieved by the chef's own hands?
+        %span.spoiler
+          Yes! It's the ever-effervescent,
+          = succeed "!" do
+            %em Glendatronix
+      %p
+        Who lost their recording contract today?
+        %span.spoiler The Zaxntines!
+    #celebs
+      %h2.heading Our Celebrities
+      %p.info
+        We have an ever changing roster of newly chipped celebrities. But it can take as little as a week for the little critters to realise they've been tagged - so you have to be fast!
+      %table.data
+        %thead
+          %tr
+            %th ID
+            %th Name
+            %th Occupation
+            %th Approx. Location
+            %th Price
+        %tbody
+          %tr
+            %td 203A
+            %td
+              Johny Stardust (
+              %a{:href => "bio.pdf"}> bio
+              )
+            %td Front-man
+            %td Los Angeles
+            %td $39.95
+          %tr
+            %td 141B
+            %td
+              Beau Dandy (
+              %a{:href => "img.jpg"}> pic
+              ,
+              %a{:href => "bio.pdf"}> bio
+              )
+            %td Singer
+            %td New York
+            %td $39.95
+          %tr
+            %td 2031
+            %td
+              Mo' Fat (
+              %a{:href => "img.jpg"}> pic
+              )
+            %td Producer
+            %td New York
+            %td $19.95
+          %tr
+            %td 007F
+            %td
+              Kellie Kelly (
+              %a{:href => "bio.pdf"}> bio
+              ,
+              %a{:href => "w.doc"}> press
+              )
+            %td Singer
+            %td Omaha
+            %td $11.95
+          %tr
+            %td 8A05
+            %td
+              Darth Fader (
+              %a{:href => "img.jpg"}> pic
+              )
+            %td DJ
+            %td London
+            %td $19.95
+          %tr
+            %td 6636
+            %td
+              Glendatronix  (
+              %a{:href => "bio.pdf"}> bio
+              ,
+              %a{:href => "w.doc"}> press
+              )
+            %td Keytarist
+            %td London
+            %td $39.95
+    #comment
+      %h2 Leave a comment
+      name:
+      %br/
+      %input{:type => "text"}/
+      %br/
+      comment:
+      %br/
+      %textarea{:cols => "30", :rows => "5"}
+    %h2 Fine Print
+    %p#fine_print
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  #footer
+    %p
+      \© Copyright 2010 CelebriTracker Productions

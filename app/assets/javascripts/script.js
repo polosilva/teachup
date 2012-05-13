@@ -61,8 +61,26 @@
 
 // Run once the DOM is ready
 $(document).ready(function () {
-    doodle.init();
+//Acordeon de elements
+
+if($('canvas').exists()){doodle.init(); alert("doodle prendido!")}
+
+$('#menu > li > ul').hide().click(function(e) {
+e.stopPropagation();
 });
+
+$('#menu > li').toggle(
+function() {$(this).css('background-position', 'right -20px').find('ul').slideDown();}, 
+function() {$(this).css('background-position', 'right top').find('ul').slideUp();});
+
+$('#menu > li').hover(function() {
+$(this).addClass('waiting');
+setTimeout(function() {$('#menu .waiting').click().removeClass('waiting');}, 600);},
+function() {$('#menu .waiting').removeClass('waiting');});
+
+});
+
+
 
 var doodle = {
     // Define some variables
@@ -83,7 +101,7 @@ doodle.init = function() {
     // Collect elements from the DOM and set-up the canvas
     doodle.canvas = $('#canvas1')[0];
     doodle.context = doodle.canvas.getContext('2d');
-    doodle.oldState = doodle.context.getImageData(0, 0, 320, 240);
+    doodle.oldState = doodle.context.getImageData(0, 0, 800, 600);
         
     
     // Mouse based interface
@@ -93,12 +111,8 @@ doodle.init = function() {
     $(doodle.canvas).bind('mouseleave', function() {
         doodle.context.putImageData(doodle.oldState, 0, 0);
     });
-    $('body').bind('mouseup', doodle.drawEnd);
-
-        
+    $('body').bind('mouseup', doodle.drawEnd);   
 };
-
-
 
 
 doodle.drawStart = function(ev) {
@@ -131,7 +145,7 @@ doodle.draw = function(event) {
         doodle.context.lineTo(x, y);
         doodle.context.closePath();
         doodle.context.stroke();
-        doodle.oldState = doodle.context.getImageData(0, 0, 320, 240);
+        doodle.oldState = doodle.context.getImageData(0, 0, 800, 600);
     } else {
     
         doodle.context.putImageData(doodle.oldState, 0, 0);
@@ -192,3 +206,11 @@ doodle.eraser = function() {
     // Remove active state from pen
     $(doodle.penID).removeClass('active');
 }
+
+
+
+
+
+
+
+

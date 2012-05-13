@@ -1,8 +1,11 @@
-%h1 Video 1
+%h1 Idea Number 1... Ready to Share it?
 %p
-#main-video{:width => "800", :height => "500"}
+
+
+#main-video{:width => "600"}
   %a#main-video-link{"data-tag" => "Homepage Featured", :href => "/video/futures-introduction"}
     #main-video-placeholder{:style => "background-image:url('/image_cache/http%3A//img.youtube.com/vi/3g6P0lRXotI/sddefault.jpg?fallback=http%3A//img.youtube.com/vi/3g6P0lRXotI/hqdefault.jpg')"}
+      .youtube-placeholder-title Futures Introduction
       %img.youtube-play{:src => "/images/youtube_play.png", :style => "visibility: hidden;"}
   .player-loading-wrapper{:style => "left: 0px;"}
     %object#idOVideo{:classid => "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", :name => "idOVideo"}
@@ -11,4 +14,8 @@
           %param{:name => "allowScriptAccess", :value => "always"}
             %param{:name => "wmode", :value => "transparent"}
               %embed#idPlayer{:allowfullscreen => "true", :allowscriptaccess => "always", :name => "idPlayer", :src => "http://www.youtube.com/v/3g6P0lRXotI?version=3&hl=en_US&fs=1&rel=0&enablejsapi=1", :type => "application/x-shockwave-flash", :wmode => "transparent"}
-%p= link_to 'Ready', {:controller => "pages", :action => "home2"} , {:class => "btn primary large"}
+
+
+%h4 Share to:
+%button.btn.btn-info{:href =>"#"}  Facebook
+%button.btn.btn-warning{:href =>"#"}  Twitter

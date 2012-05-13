@@ -6,3 +6,173 @@ canvas {
 	border: 1px solid black;
 }
 
+body {
+  padding-bottom: 40px;
+  padding-top: 60px;
+}
+
+#example{
+	background: white;
+	border: 2px solid #333;
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+	width: 100px;
+}
+#example p{
+	color: #333;
+	display: none;
+	font-weight: bold;
+	text-align: center;
+}
+#example p:first-child{
+	display: block;
+}
+
+row .btn {
+    position: fixed;
+	margin-right: 100px;
+	margin-top: 100px;
+}
+
+footer {
+  margin-top: 100px;
+  position: absolute; 
+  bottom: 0;
+  margin-bottom: 100px;
+  margin-left: 1000px;
+  float: right;
+}
+
+container {
+	position: relative;
+}
+
+.jumbotron .btn-large {
+font-size: 20px;
+font-weight: normal;
+padding: 14px 24px;
+margin-right: 10px;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+}
+
+header {
+	
+	position: fixed;
+	margin-left:auto;
+  margin-right:auto;
+	margin-top: 100px;
+
+}
+
+.download-info{
+		position: absolute;
+
+
+}
+
+.masthead h1 {
+margin-bottom: 18px;
+}
+.masthead h1, .masthead p {
+text-align: center;
+}
+.jumbotron h1 {
+margin-bottom: 9px;
+font-size: 81px;
+font-weight: bold;
+letter-spacing: -1px;
+line-height: 1;
+}
+h1 {
+font-size: 30px;
+line-height: 36px;
+}
+h1, h2, h3, h4, h5, h6 {
+margin: 0;
+font-family: inherit;
+font-weight: bold;
+color: inherit;
+text-rendering: optimizelegibility;
+}
+
+
+user agent stylesheeth1 {
+display: block;
+font-size: 2em;
+-webkit-margin-before: 0.67em;
+-webkit-margin-after: 0.67em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+}
+
+
+** Acordeon Elements **
+#container {
+  position: relative;
+}
+
+#menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#menu, #menu ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+#menu li {
+  float: left;
+  background: #FFF;
+}
+
+#menu a {
+  display: block;
+  padding: 5px;
+  width: 130px;
+}
+
+#menu li ul {
+  position: absolute;
+  left: -999em;
+  width: 140px;
+}
+
+#menu li:hover ul, #menu li ul:hover {
+  left:auto;
+}
+
+
+.element{ 
+background: none repeat scroll 0 0 #999999; 
+color: #000000;
+font-weight: bold; 
+padding-left: 10px; 
+border-style:solid; 
+border-width:medium; 
+border-color:#666666;
+height:60px; 
+width: 100px;
+-webkit-border-radius: 5px; 
+float: left;
+margin-top: 0;
+margin-left: 10px; 
+}
+
+nav ul
+{
+list-style-type:none;
+}
+
+.demo {
+  width: 520px;
+  height: 250px;
+  border: 1px solid black;
+  overflow: scroll;
+}

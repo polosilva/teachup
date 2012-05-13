@@ -1,0 +1,10 @@
+= form_for @proyecto do |f|
+  -if @proyecto.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@proyecto.errors.count, "error")} prohibited this proyecto from being saved:"
+      %ul
+        - @proyecto.errors.full_messages.each do |msg|
+          %li= msg
+
+  .actions
+    = f.submit 'Save'

@@ -13,3 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+;(function (jq_fn) {        
+    jq_fn.exists = function () {
+        return !!(this.length);
+    };
+    jq_fn.exist = jq_fn.exists;
+    jq_fn.do_not_exist = function () {
+        return !(this.length);
+    };
+    jq_fn.does_not_exist = jq_fn.do_not_exist;
+})(jQuery.fn);

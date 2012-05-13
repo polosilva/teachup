@@ -1,0 +1,32 @@
+%h1 TeachUp
+%h3 Video Recording
+%p
+%row
+  .span4  
+    %label
+      Drawing tool:
+      %select#dtool
+        %option{:value => "line"} Line
+        %option{:value => "rect"} Rectanlge
+        %option{:value => "pencil"} Pencil
+  %label
+    Include at this point:
+    %select#dtool
+      %option{:value => "line"} Table
+      %option{:value => "rect"} Image
+      %option{:value => "pencil"} Graph
+%canvas#canvas1{:width =>"800", :height => "400"}
+%p{:style => "float:right ;  margin-top: 370px; margin-right: 30px"}=link_to 'Video Ready!', {:controller => "pages", :action => "home2"} , {:class => "btn btn-success"}
+
+%row
+  .btn-group
+    %a.btn{:href => "#"}
+      %i.icon-facetime-video
+    %a.btn{:href => "#"}
+      %i.icon-pause
+    %a.btn{:href => "#"}
+      %i.icon-stop
+    %span  
+      
+
+%span
