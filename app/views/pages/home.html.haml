@@ -1,23 +1,38 @@
 %header.jumbotron.masthead  
-  %h1 TeachUp!
-  %h2 Just record your next idea
+  %h1.first TeachUp!
+  %h2.second Just record your next idea...
   %p.download-info
-    .demo
-      #droppable.ui-widget-header{}
-        %a.btn.btn-primary.btn-large{:href => "http://localhost:3000/pages/proyecto1/"} Teacher!
-      #draggable.ui-widget-content
-        %a.btn.btn-large{:href => "http://localhost:3000/pages/vistaalumno/" , }
-          Student!
-        
+.demo
+  %span.draggable
+    %a.btn.btn-primary.btn-large{:href => "http://localhost:3000/pages/proyecto1/"} Teacher!
+  %span.draggable
+    %a.btn.btn-large{:href => "http://localhost:3000/pages/vistaalumno/" }
+      Student!
+  %span.draggable
+    %a.btn.btn-large{:href => "http://localhost:3000/pages/vistaalumno/" }
+      Student2!
+  .draggable2
+    %iframe{:scrolling => "no", :src => "https://www.google.com/fusiontables/embedviz?viz=MAP&q=select+col1+from+1DUdU5aA4_KNtrVQKhX1kJuCiXjL_zwi-UR9mYjI+&h=false&lat=21.19957299537964&lng=176.70654664999995&z=2&t=1&l=col1"}
+    = render "partials/handler"
+  .draggable2
+    %iframe{:scrolling => "no", :src => "https://www.youtube.com/embed/D1R-jKKp3NA?rel=0"}
+    = render "partials/handler"
+  .draggable2
+    %iframe{:src => "http://docs.google.com/viewer?url=http%3A%2F%2Fwww.redsalud.cl%2Fwp-content%2Fuploads%2F2011%2F05%2Fmemoria_2011.pdf&embedded=true"}
+    = render "partials/handler"
+
+ 
 :javascript
   $(function() {
-  	$( "#draggable" ).draggable();
-  	$( "#droppable" ).droppable({
-  		drop: function( event, ui ) {
+    
+    $( ".draggable" ).draggable();
+    $( " p" ).disableSelection();
+    $( ".draggable2" ).draggable({handle: "a"});
+    $( "#droppable" ).droppable({
+      drop:function( event, ui ) {
   			$( this )
-  				.addClass( "ui-state-highlight" )
   				.find( "p" )
   				.html( "Dropped!" );
-  		}
+      }
   	});
   });

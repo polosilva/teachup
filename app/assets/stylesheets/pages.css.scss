@@ -4,6 +4,7 @@
 
 canvas {
 	border: 1px solid black;
+  overflow: scroll;
 }
 
 body {
@@ -18,19 +19,20 @@ body {
 	margin: 0 auto;
 	padding: 10px;
 	width: 100px;
+  p {
+    color: #333;
+    display: none;
+    font-weight: bold;
+    text-align: center;
+  }
 }
-#example p{
-	color: #333;
-	display: none;
-	font-weight: bold;
-	text-align: center;
-}
+
 #example p:first-child{
 	display: block;
 }
 
 row .btn {
-    position: fixed;
+  
 	margin-right: 100px;
 	margin-top: 100px;
 }
@@ -59,18 +61,18 @@ border-radius: 6px;
 }
 
 header {
-	
-	position: fixed;
+  display: inline;
 	margin-left:auto;
   margin-right:auto;
 	margin-top: 100px;
-
 }
 
 .download-info{
-		position: absolute;
 
+}
 
+h2 {
+  text-align: center;
 }
 
 .masthead h1 {
@@ -125,24 +127,22 @@ font-weight: bold;
   padding: 0;
   margin: 0;
   list-style-type: none;
-}
-
-#menu li {
-  float: left;
-  background: #FFF;
-}
-
-#menu a {
+  li {
+    float: left;
+    background: #FFF;
+    ul {
+      position: absolute;
+      left: -999em;
+      width: 140px;
+    }
+  }
+  a {
   display: block;
-  padding: 5px;
-  width: 130px;
+    padding: 5px;
+    width: 130px;
+  }
 }
 
-#menu li ul {
-  position: absolute;
-  left: -999em;
-  width: 140px;
-}
 
 #menu li:hover ul, #menu li ul:hover {
   left:auto;
@@ -171,8 +171,49 @@ list-style-type:none;
 }
 
 .demo {
-  width: 520px;
-  height: 250px;
+  width: 1400px;
+  height: 500px;
   border: 1px solid black;
+  border-radius: 10px 10px 10px 10px;
   overflow: scroll;
+  resize: both;
+  margin: 20px;
+}
+
+.draggable2{
+  display:inline-block;
+  resize:both;
+  overflow:scroll;
+  border: 2px solid black;
+  display: inline-block;
+  width: 350px;
+  iframe {
+    width: 100%;
+    height: 100%
+  }
+  .handler  {
+    display: inline;
+    background-image:url('cursor_drag_arrow.ico');
+    background-color:#FFFFFF;
+  }
+}
+
+.first {
+  background-color: black;
+  color: #400040;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.second {
+  background-color: black;
+  color: yellow;
+  text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
+}
+
+#canvas-wrap { position:relative } /* Make this a positioned parent */
+#overlay     { position:absolute; top:20px; left:30px; }
+
+canvas {
+  width: 100%;
+  height: 100%;
 }

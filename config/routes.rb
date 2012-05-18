@@ -1,6 +1,8 @@
 Teachup::Application.routes.draw do
   
-  resources :proyectos
+  resources :lectures
+
+  resources :users
 
   root :to => "pages#home"
   get "pages/home"
